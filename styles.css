@@ -1,1 +1,41 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #061a2b;
+  color: white;
+}
 
+/* TOP NAV */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: black;
+}
+
+.top-nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  padding: 60px;
+}
+
+/* ACTIVE SEASON BOX */
+.active-season {
+  margin-top: 40px;
+  padding: 20px;
+  background: #0d2f4f;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 15px;
+  background: #FFD166;
+  border: none;
+  cursor: pointer;
+}
