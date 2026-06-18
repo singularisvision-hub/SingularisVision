@@ -47,17 +47,18 @@
 
 </main>
 <!-- GALLERY MODAL -->
-<div id="modal" class="modal">
+<div id="modal" class="modal" onclick="outsideClick(event)">
   <div class="modal-content">
-    <span class="close" onclick="closeModal()">×</span>
 
-    <h2 id="modal-title">Title</h2>
-    <p id="modal-status">Status</p>
+    <button class="close-btn" onclick="closeModal()">×</button>
 
-    <div id="modal-body">
-      Content goes here
-    </div>
+    <h2 id="modal-title"></h2>
+    <p id="modal-status"></p>
+
+    <div id="modal-body"></div>
+
   </div>
+</div>
 </div>
   <script>
 function openModal(title, status, content) {
