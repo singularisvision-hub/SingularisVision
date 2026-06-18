@@ -1,24 +1,71 @@
+:root {
+  --bg: #061a2b;
+  --panel: #0d2f4f;
+  --text: #ffffff;
+  --accent: #FFD166;
+  --muted: rgba(255, 255, 255, 0.65);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #061a2b;
-  color: white;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
 }
 
-/* NAV */
+/* =========================
+   NAVIGATION SYSTEM
+========================= */
 .top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background: black;
+  padding: 16px 24px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .top-nav a {
-  color: white;
-  margin-left: 12px;
+  color: var(--text);
   text-decoration: none;
+  margin-left: 14px;
+  opacity: 0.85;
+  transition: 0.2s ease;
 }
+
+.top-nav a:hover {
+  opacity: 1;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+.hero {
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   STANDARD CARD (GENERAL USE)
+========================= */
+.card {
+  background: var(--panel);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+/* =========================
+   GALLERY GRID SYSTEM
+========================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -26,58 +73,59 @@ body {
   margin-top: 30px;
 }
 
-/* BASE CARD */
+/* =========================
+   ART / SEASON CARDS
+========================= */
 .art-card {
+  background: var(--panel);
   padding: 20px;
   border-radius: 12px;
-  background: #0d2f4f;
+  border: 1px solid transparent;
   transition: 0.2s ease;
 }
 
-/* ACTIVE SEASON */
+/* ACTIVE STATE */
 .art-card.active {
-  border: 2px solid #FFD166;
+  border: 2px solid var(--accent);
 }
 
 /* LOCKED STATE */
 .art-card.locked {
-  opacity: 0.4;
+  opacity: 0.35;
   filter: grayscale(100%);
 }
 
 /* PREVIEW STATE */
 .art-card.preview {
   opacity: 0.7;
-  border: 1px dashed #ffffff55;
-}
-/* MAIN LAYOUT */
-.hero {
-  padding: 60px 40px;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
 }
 
-/* CARD SYSTEM */
-.card {
-  background: #0d2f4f;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 12px;
-  max-width: 600px;
+/* =========================
+   TYPOGRAPHY SYSTEM
+========================= */
+h1, h2, h3, p {
+  margin: 0 0 10px 0;
 }
 
-/* TEXT SPACING FIX */
-h1, h2, p {
-  margin-bottom: 10px;
+.muted {
+  color: var(--muted);
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON SYSTEM
+========================= */
 button {
   padding: 10px 16px;
-  background: #FFD166;
+  background: var(--accent);
   border: none;
   cursor: pointer;
   border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s ease;
 }
 
 button:hover {
   opacity: 0.9;
+  transform: translateY(-1px);
 }
