@@ -5,47 +5,37 @@ body {
   color: white;
 }
 
-/* NAV BAR */
+/* TOP NAV */
 .top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 20px;
   background: black;
 }
 
 .top-nav a {
   color: white;
-  margin-left: 12px;
+  margin: 0 10px;
   text-decoration: none;
-  opacity: 0.85;
 }
 
-.top-nav a:hover {
-  opacity: 1;
-}
-
-/* MAIN AREA */
+/* HERO */
 .hero {
-  padding: 50px;
+  padding: 60px;
 }
 
-/* CARD SYSTEM */
-.card {
-  background: #0d2f4f;
+/* ACTIVE SEASON BOX */
+.active-season {
+  margin-top: 40px;
   padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
+  background: #0d2f4f;
+  border-radius: 8px;
 }
 
-/* BUTTON */
 button {
   padding: 10px 15px;
   background: #FFD166;
   border: none;
   cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.9;
 }
