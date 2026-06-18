@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seasons</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,26 +20,7 @@
     <a href="login.html">Access</a>
   </nav>
 </header>
-<h1>Seasons</h1>
 
-<div class="grid">
-
-  <div class="art-card active">
-    <h2>Genesis Layer #001</h2>
-    <p>Released</p>
-  </div>
-
-  <div class="art-card preview">
-    <h2>Genesis Layer #002</h2>
-    <p>Preview</p>
-  </div>
-
-  <div class="art-card locked">
-    <h2>Genesis Layer #003</h2>
-    <p>Locked</p>
-  </div>
-
-</div>
 <main class="hero">
 
   <h1>Seasons</h1>
@@ -47,90 +28,23 @@
   <div class="grid">
 
     <div class="art-card active">
-      <h2>Genesis Layer</h2>
-      <p>Active Season</p>
-      <button onclick="location.href='index.html'">Enter</button>
+      <h2>Genesis Layer #001</h2>
+      <p>Active</p>
     </div>
 
     <div class="art-card preview">
-      <h2>Signal Drift</h2>
+      <h2>Genesis Layer #002</h2>
       <p>Preview</p>
     </div>
 
     <div class="art-card locked">
-      <h2>Fragmented Light</h2>
+      <h2>Genesis Layer #003</h2>
       <p>Locked</p>
     </div>
 
   </div>
 
 </main>
-<!-- GALLERY MODAL -->
-<div id="modal" class="modal" onclick="outsideClick(event)">
-  <div class="modal-content">
 
-    <button class="close-btn" onclick="closeModal()">×</button>
-
-    <h2 id="modal-title"></h2>
-    <p id="modal-status"></p>
-
-    <div id="modal-body"></div>
-
-  </div>
-</div>
-</div>
-  <script>
-function openModal(title, status, content) {
-  document.getElementById("modal").style.display = "flex";
-  document.getElementById("modal-title").innerText = title;
-  document.getElementById("modal-status").innerText = status;
-  document.getElementById("modal-body").innerText = content;
-}
-
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-</script>
-<script>
-function openModal(title, status, content) {
-  document.getElementById("modal").style.display = "flex";
-  document.getElementById("modal-title").innerText = title;
-  document.getElementById("modal-status").innerText = status;
-  document.getElementById("modal-body").innerText = content;
-}
-
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-</script>
-  <script>
-function openModal(title, status, content) {
-  const modal = document.getElementById("modal");
-
-  document.getElementById("modal-title").innerText = title;
-  document.getElementById("modal-status").innerText = status;
-  document.getElementById("modal-body").innerText = content;
-
-  modal.classList.add("show");
-}
-
-function closeModal() {
-  document.getElementById("modal").classList.remove("show");
-}
-
-// close when clicking outside content
-function outsideClick(e) {
-  if (e.target.id === "modal") {
-    closeModal();
-  }
-}
-
-// ESC key support
-document.addEventListener("keydown", function(e) {
-  if (e.key === "Escape") {
-    closeModal();
-  }
-});
-</script>
 </body>
 </html>
