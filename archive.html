@@ -6,7 +6,18 @@
   <title>Archive</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+<script>
+function openModal(title, status, content) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modal-title").innerText = title;
+  document.getElementById("modal-status").innerText = status;
+  document.getElementById("modal-body").innerText = content;
+}
 
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 <body>
 
 <header class="top-nav">
