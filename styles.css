@@ -18,54 +18,42 @@ body {
   line-height: 1.5;
 }
 
-/* =========================
-   NAVIGATION SYSTEM
-========================= */
+/* NAV */
 .top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
   background: #000;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .top-nav a {
   color: var(--text);
-  text-decoration: none;
   margin-left: 14px;
+  text-decoration: none;
   opacity: 0.85;
-  transition: 0.2s ease;
 }
 
 .top-nav a:hover {
   opacity: 1;
 }
 
-/* =========================
-   PAGE LAYOUT
-========================= */
+/* LAYOUT */
 .hero {
   padding: 60px 40px;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-/* =========================
-   STANDARD CARD (GENERAL USE)
-========================= */
+/* CARDS */
 .card {
   background: var(--panel);
   padding: 20px;
-  margin-top: 20px;
   border-radius: 12px;
+  margin-top: 20px;
 }
 
-/* =========================
-   GALLERY GRID SYSTEM
-========================= */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -73,142 +61,33 @@ body {
   margin-top: 30px;
 }
 
-/* =========================
-   ART / SEASON CARDS
-========================= */
+/* ART CARDS */
 .art-card {
   background: var(--panel);
   padding: 20px;
   border-radius: 12px;
-  border: 1px solid transparent;
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
-/* ACTIVE STATE */
+.art-card:hover {
+  transform: translateY(-3px);
+}
+
 .art-card.active {
   border: 2px solid var(--accent);
 }
 
-/* LOCKED STATE */
+.art-card.preview {
+  opacity: 0.7;
+  border: 1px dashed rgba(255,255,255,0.4);
+}
+
 .art-card.locked {
-  opacity: 0.35;
+  opacity: 0.3;
   filter: grayscale(100%);
 }
 
-/* PREVIEW STATE */
-.art-card.preview {
-  opacity: 0.7;
-  border: 1px dashed rgba(255, 255, 255, 0.4);
-}
-
-/* =========================
-   TYPOGRAPHY SYSTEM
-========================= */
-h1, h2, h3, p {
+/* TEXT */
+h1, h2, p {
   margin: 0 0 10px 0;
-}
-
-.muted {
-  color: var(--muted);
-}
-
-/* =========================
-   BUTTON SYSTEM
-========================= */
-button {
-  padding: 10px 16px;
-  background: var(--accent);
-  border: none;
-  cursor: pointer;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.2s ease;
-}
-
-button:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
-}
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-content {
-  background: var(--panel);
-  padding: 30px;
-  border-radius: 12px;
-  width: 80%;
-  max-width: 600px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-}
-/* =========================
-   MODAL SYSTEM (UPGRADED)
-========================= */
-
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.88);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  animation: fadeIn 0.2s ease;
-}
-
-.modal.show {
-  display: flex;
-}
-
-.modal-content {
-  background: var(--panel);
-  padding: 28px;
-  border-radius: 14px;
-  width: min(700px, 90%);
-  position: relative;
-  transform: translateY(10px);
-  animation: popIn 0.2s ease forwards;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  color: var(--accent);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes popIn {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
 }
