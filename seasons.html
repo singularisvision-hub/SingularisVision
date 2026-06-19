@@ -23,99 +23,24 @@
 
 <main class="hero">
 
-  <h1>Seasons</h1>
+  <h1>Image Test Gallery</h1>
 
-  <div class="grid">
+  <div class="card">
+    <h2>A-1</h2>
+    <img src="images/A-1.jpg" alt="A-1" style="width:100%; max-width:600px;">
+  </div>
 
-    <div class="art-card active" onclick="openModal('A-1', './images/A-1.jpg')">
-      <img src="./images/A-1.jpg">
-      <h2>A-1</h2>
-      <p>Active</p>
-    </div>
+  <div class="card">
+    <h2>B-1</h2>
+    <img src="images/B-1.jpg" alt="B-1" style="width:100%; max-width:600px;">
+  </div>
 
-    <div class="art-card preview" onclick="openModal('A-2', './images/A-2.jpg')">
-      <img src="./images/A-2.jpg">
-      <h2>A-2</h2>
-      <p>Preview</p>
-    </div>
-
-    <div class="art-card locked" onclick="openModal('A-3', './images/A-3.jpg')">
-      <img src="./images/A-3.jpg">
-      <h2>A-3</h2>
-      <p>Locked</p>
-    </div>
-
-    <div class="art-card active" onclick="openModal('B-1', './images/B-1.jpg')">
-      <img src="./images/B-1.jpg">
-      <h2>B-1</h2>
-      <p>Active</p>
-    </div>
-
-    <div class="art-card preview" onclick="openModal('B-2', './images/B-2.jpg')">
-      <img src="./images/B-2.jpg">
-      <h2>B-2</h2>
-      <p>Preview</p>
-    </div>
-
-    <div class="art-card locked" onclick="openModal('B-3', './images/B-3.jpg')">
-      <img src="./images/B-3.jpg">
-      <h2>B-3</h2>
-      <p>Locked</p>
-    </div>
-
-    <div class="art-card active" onclick="openModal('C-1', './images/C-1.jpg')">
-      <img src="./images/C-1.jpg">
-      <h2>C-1</h2>
-      <p>Active</p>
-    </div>
-
-    <div class="art-card preview" onclick="openModal('C-2', './images/C-2.jpg')">
-      <img src="./images/C-2.jpg">
-      <h2>C-2</h2>
-      <p>Preview</p>
-    </div>
-
-    <div class="art-card locked" onclick="openModal('C-3', './images/C-3.jpg')">
-      <img src="./images/C-3.jpg">
-      <h2>C-3</h2>
-      <p>Locked</p>
-    </div>
-
+  <div class="card">
+    <h2>C-1</h2>
+    <img src="images/C-1.jpg" alt="C-1" style="width:100%; max-width:600px;">
   </div>
 
 </main>
-
-<!-- MODAL -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-
-    <button onclick="closeModal()">×</button>
-
-    <h2 id="modal-title"></h2>
-    <img id="modal-image" style="width:100%; margin-top:10px; border-radius:10px;">
-
-  </div>
-</div>
-
-<script>
-function openModal(title, image) {
-  document.getElementById("modal").style.display = "flex";
-  document.getElementById("modal-title").innerText = title;
-  document.getElementById("modal-image").src = image;
-}
-
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-
-window.onclick = function(e) {
-  if (e.target.id === "modal") closeModal();
-}
-
-document.addEventListener("keydown", function(e) {
-  if (e.key === "Escape") closeModal();
-});
-</script>
 
 </body>
 </html>
